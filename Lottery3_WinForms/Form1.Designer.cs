@@ -42,7 +42,7 @@ namespace Lottery3_WinForms
             this.nUD_Numbers3 = new System.Windows.Forms.NumericUpDown();
             this.nUD_Numbers4 = new System.Windows.Forms.NumericUpDown();
             this.btn_Start = new System.Windows.Forms.Button();
-            this.OnParameterChanged += new System.EventHandler(this.Form1_ParameterChanged);
+            this.lbl_Price = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.nUD_Loto6)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nUD_Loto7)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nUD_Miniloto)).BeginInit();
@@ -173,7 +173,7 @@ namespace Lottery3_WinForms
             // btn_Start
             // 
             this.btn_Start.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.btn_Start.Location = new System.Drawing.Point(50, 321);
+            this.btn_Start.Location = new System.Drawing.Point(50, 399);
             this.btn_Start.Name = "btn_Start";
             this.btn_Start.Size = new System.Drawing.Size(445, 44);
             this.btn_Start.TabIndex = 12;
@@ -181,11 +181,22 @@ namespace Lottery3_WinForms
             this.btn_Start.UseVisualStyleBackColor = true;
             this.btn_Start.Click += new System.EventHandler(this.btn_Start_Click);
             // 
+            // lbl_Price
+            // 
+            this.lbl_Price.AutoSize = true;
+            this.lbl_Price.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.lbl_Price.Location = new System.Drawing.Point(50, 334);
+            this.lbl_Price.Name = "lbl_Price";
+            this.lbl_Price.Size = new System.Drawing.Size(90, 33);
+            this.lbl_Price.TabIndex = 13;
+            this.lbl_Price.Text = "Price:";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(531, 391);
+            this.ClientSize = new System.Drawing.Size(531, 461);
+            this.Controls.Add(this.lbl_Price);
             this.Controls.Add(this.btn_Start);
             this.Controls.Add(this.nUD_Numbers4);
             this.Controls.Add(this.nUD_Numbers3);
@@ -201,6 +212,7 @@ namespace Lottery3_WinForms
             this.Controls.Add(this.label1);
             this.Name = "Form1";
             this.Text = "Lottery3";
+            this.OnParameterChanged += new System.EventHandler(this.Form1_ParameterChanged);
             ((System.ComponentModel.ISupportInitialize)(this.nUD_Loto6)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.nUD_Loto7)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.nUD_Miniloto)).EndInit();
@@ -226,6 +238,7 @@ namespace Lottery3_WinForms
         private System.Windows.Forms.NumericUpDown nUD_Numbers3;
         private System.Windows.Forms.NumericUpDown nUD_Numbers4;
         private System.Windows.Forms.Button btn_Start;
+        private System.Windows.Forms.Label lbl_Price;
     }
 }
 

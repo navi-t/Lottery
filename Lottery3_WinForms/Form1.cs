@@ -91,6 +91,7 @@ namespace Lottery3_WinForms
         private void Form1_ParameterChanged(object sender, EventArgs e)
         {
             controller.Parameter = GetParameter();
+            lbl_Price.Text = $"Price:{controller.CalcPrice().ToString("C")}";
         }
 
         public void SetParameter(UIParameter param)
@@ -130,6 +131,8 @@ namespace Lottery3_WinForms
                     controller.Parameter = storager.GetParameter<UIParameter>();
                 }
                 SetParameter(controller.Parameter);
+
+                lbl_Price.Text = $"Price:{controller.CalcPrice().ToString("C")}";
             }
             catch (Exception ex)
             {

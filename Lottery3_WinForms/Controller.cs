@@ -32,6 +32,12 @@ namespace Lottery3_WinForms
             return GenerateResultMessage(lotteryNumbers, totalPrice);
         }
 
+        public int CalcPrice()
+        {
+            var calcParam = paramManager.GetCalcParameter();
+            return PriceCalculator.CalcPrice(calcParam);
+        }
+
         private string GenerateResultMessage(IDictionary<string, List<int[]>> dict, int price)
         {
             var result = string.Empty;
